@@ -39,3 +39,10 @@ Once you have these, they are stored in the below variables
 const char*  sfLoginFingerprint = "0B:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx";
 const char*  sfInstanceFingerprint = "0B:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx";
 ```
+
+You can define the topic you want to listen for by passing it in to the setupConnection method e.g
+```
+setupConnection("platform_event__e");
+```
+
+Once setup and connected, this sketch will push the content of any platform event it recieves in JSON to the serial port, from here you can customise the logic to do whatever you like.
